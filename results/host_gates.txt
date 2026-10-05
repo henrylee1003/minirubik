@@ -1,0 +1,65 @@
+oracle built in 0.13 s
+distance distribution: 0:1 1:9 2:54 3:321 4:1847 5:9992 6:50136 7:227536 8:870072 9:1887748 10:623800 11:2644
+
+H2 perm_prune   entries   5040  unpopulated 0  solved entry 0  max 7  histogram 1 9 54 297 1233 2157 1244 45  PASS
+H2 twist_prune  entries    729  unpopulated 0  solved entry 0  max 6  histogram 1 2 12 64 274 336 40  PASS
+H2 perm x 27    entries 136080  unpopulated 0  solved entry 0  max 9  histogram 1 9 54 317 1783 8992 36050 67862 20892 120  PASS
+H2 move tables: every face table is a bijection  PASS
+
+H1 heuristic                      max h   mean h   mean d-h      h > d
+H1 ceil(W/4), W = wrong cubies        2    1.995      6.760          0  PASS
+H1 twist PDB only (729)               6    4.436      4.319          0  PASS
+H1 perm PDB only (5040)               7    4.862      3.894          0  PASS
+H1 max(perm, twist)  [chosen]         7    5.144      3.611          0  PASS
+H1 perm x 27 PDB (136080)             9    6.707      2.048          0  PASS
+H1 max(perm x 27, twist)              9    6.721      2.035          0  PASS
+
+vector 21345671111111 (distance 11)
+heuristic                      length          nodes    seconds
+h = 0 (plain IDDFS)                11      163549356       0.56
+ceil(W/4), W = wrong cubies        11       28056573       0.14
+twist PDB only (729)               11        3398844       0.02
+perm PDB only (5040)               11         954429       0.01
+max(perm, twist)  [chosen]         11         233961       0.00
+perm x 27 PDB (136080)             11          22785       0.00
+max(perm x 27, twist)              11          16539       0.00
+chosen heuristic, nodes per bound: 7:777 8:5289 9:28743 10:158589 11:40563
+chosen heuristic without the same-face skip (9 moves everywhere): 2689497 nodes
+
+all 2644 distance-11 states
+heuristic                         min nodes   mean nodes    max nodes
+twist PDB only (729)                1199710      1831535      7874574
+perm PDB only (5040)                 709009      1025265      2630478
+max(perm, twist)  [chosen]           140895       206618       639792
+perm x 27 PDB (136080)                 8665        23542        86954
+max(perm x 27, twist)                  7219        16809        58076
+
+H3 max(perm, twist)  [chosen]: 3674160 states searched in 37.0 s with 20 threads, wrong lengths 0  PASS
+distance     states     mean nodes      max nodes
+       0          1              0              0
+       1          9              5              9
+       2         54              8             15
+       3        321             12             31
+       4       1847             18            144
+       5       9992             40            641
+       6      50136            129           1442
+       7     227536            559           3940
+       8     870072           2857          14751
+       9    1887748          13896          55578
+      10     623800          48130         250318
+      11       2644         206618         639792
+
+H3 max(perm x 27, twist): 3674160 states searched in 3.4 s with 20 threads, wrong lengths 0  PASS
+distance     states     mean nodes      max nodes
+       0          1              0              0
+       1          9              5              9
+       2         54              8             15
+       3        321             12             25
+       4       1847             16             84
+       5       9992             20            137
+       6      50136             29            243
+       7     227536             59            568
+       8     870072            219           1836
+       9    1887748            986           8884
+      10     623800           3435          22894
+      11       2644          16809          58076
