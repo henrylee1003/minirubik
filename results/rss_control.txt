@@ -1,0 +1,16 @@
+# /usr/bin/time -f '%M KB' ./rss_control N  (3 runs each, WSL Ubuntu 24.04, gcc 13.3)
+0 bytes -> 1440 KB
+0 bytes -> 1440 KB
+0 bytes -> 1440 KB
+1048576 bytes -> 2400 KB
+1048576 bytes -> 2400 KB
+1048576 bytes -> 2400 KB
+18405414 bytes -> 19200 KB
+18405414 bytes -> 19200 KB
+18405414 bytes -> 19200 KB
+55111464 bytes -> 55040 KB
+55111464 bytes -> 55200 KB
+55111464 bytes -> 55200 KB
+104857600 bytes -> 103680 KB
+104857600 bytes -> 103680 KB
+104857600 bytes -> 103680 KB
